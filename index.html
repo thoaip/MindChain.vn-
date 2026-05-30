@@ -46,6 +46,11 @@
   .mc-member b { color:#3b9dff; }
   h1, h2, h3, h4, h5, .sec-title, .title, .team-name { word-break: normal !important; overflow-wrap: normal !important; }
   .word { display: inline-block; white-space: nowrap; }
+  .hero-collage { display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; max-width:560px; }
+  .hero-collage img { width:100%; height:100%; object-fit:cover; border-radius:16px; box-shadow:0 18px 44px -18px rgba(0,0,0,.55); }
+  .hero-collage .hc-main { grid-column:1 / span 2; aspect-ratio:16/10; }
+  .hero-collage .hc-a, .hero-collage .hc-b { aspect-ratio:1/1; }
+  @media (max-width:991px){ .hero-collage{ margin-left:auto; margin-right:auto; } }
 </style>
 
 </head>
@@ -371,7 +376,11 @@
                             <div class="hero-right">
                                 <div class="image-thumb direction-rtl">
                                     <div class="image">
-                                        <img class="img" style="width:100%;border-radius:20px;box-shadow:0 30px 70px -25px rgba(0,0,0,.55)" src="assets/images/real/hero-class.jpg" alt="Lớp đào tạo và trao chứng chỉ MindChain">
+                                        <div class="hero-collage">
+                                            <img class="hc-main" src="assets/images/real/hero-group.jpg" alt="Học viên MindChain Academy">
+                                            <img class="hc-a" src="assets/images/real/students-lab.jpg" alt="Học viên thực hành cùng giảng viên">
+                                            <img class="hc-b" src="assets/images/real/hero-class.jpg" alt="Lễ trao chứng chỉ khóa học">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="counter-info">
@@ -393,7 +402,7 @@
                                 <img src="assets/images/social/social-img03.webp" alt="Client 03">
                             </div>
                             <div class="happy-customers">
-                                <div class="text">1.6M+</div>
+                                <div class="text">5K+</div>
                                 <div class="rating-viewers">
                                     học viên & đối tác
                                 </div>
