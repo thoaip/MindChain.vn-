@@ -53,6 +53,9 @@
   .hero-collage .hc-a, .hero-collage .hc-b { aspect-ratio:1/1; }
   @media (max-width:991px){ .hero-collage{ margin-left:auto; margin-right:auto; } }
   .tv-hero-section .hero-content-left .text-icon .text { max-width: 520px; }
+  /* dim + soft-blur real-photo section backgrounds for readable text */
+  .tv-industries-section .bg.image img, .tv-project-section .bg.image img { filter: brightness(0.38) saturate(0.95) blur(2px) !important; transform: scale(1.06); }
+  .tv-industries-section .bg.image::after, .tv-project-section .bg.image::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,16,64,.55), rgba(0,16,64,.72)); }
   @media (max-width:991px){ .tv-hero-section .hero-content-left .text-icon .text { max-width: 100%; } }
 </style>
 
