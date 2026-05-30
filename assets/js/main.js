@@ -1016,7 +1016,7 @@ JS TABLE OF CONTENTS
 				if (entry.isIntersecting) {
 					const el = entry.target;
 					const animationType = el.getAttribute('data-animation') || 'slide-right';
-					const split = new SplitType(el, { types: 'chars' });
+					const split = new SplitType(el, { types: 'words, chars' });
 					setInitialStyles(split.chars, animationType);
 					animateChars(split.chars, animationType);
 					observer.unobserve(el); // Run once
