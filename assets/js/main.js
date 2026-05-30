@@ -1016,9 +1016,8 @@ JS TABLE OF CONTENTS
 				if (entry.isIntersecting) {
 					const el = entry.target;
 					const animationType = el.getAttribute('data-animation') || 'slide-right';
-					const split = new SplitType(el, { types: 'words, chars' });
-					setInitialStyles(split.chars, animationType);
-					animateChars(split.chars, animationType);
+					gsap.from(el, { opacity: 0, y: 20, duration: 0.8, ease: 'power2.out' });
+					void animationType; // SplitType disabled: keep words intact for Vietnamese
 					observer.unobserve(el); // Run once
 				}
 			});
